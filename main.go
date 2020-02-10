@@ -13,6 +13,6 @@ func main() {
 		log.Println("request from", r.RemoteAddr)
 		fmt.Fprintf(w, "hello, world")
 	})
-	log.Println("listening on")
-	http.ListenAndServe(":8111", nil)
+	log.Println("listening on", addr)
+	http.ListenAndServe(addr, nil)
 }
